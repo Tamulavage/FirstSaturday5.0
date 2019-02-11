@@ -284,11 +284,12 @@ while(serverIsRunning()) {
         int w = 0;
         int sumOfThrees = 0;
 
- 
+ for(int i=0;i<7;i++){
+     sumOfThrees = sumOfThrees +threes_array[i];
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
@@ -300,11 +301,14 @@ while(serverIsRunning()) {
     public int rewriteFooAsWhile() {
         int w = 0;
         int sumOfThrees = 0;
+        int i=0;
 
- 
+ while(i<7){
+     sumOfThrees = sumOfThrees +threes_array[i];
             // calling
             w = w + 1;
             // each time through the inner loop
+        }
         
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
@@ -322,12 +326,18 @@ while(serverIsRunning()) {
     public int manageYardAndJunior() {
         int w = 0;
         boolean onTime = true;
+        boolean yardNeedsMowed = true;
 
         // ADD YOUR CODE here.
- 
+        while(isSummer()){
+            if(yardNeedsMowed) {
+                yellAtJuniorToMowLawn();
+            }
             // be sure to call
             w = w + 1;
             // each time inside the loop
+        }
+        sendJuniorBackToSchool("first day of school");
         
         return w;
     }
@@ -341,9 +351,12 @@ while(serverIsRunning()) {
         int w = 0;
         int numberOfVotes = voteTallies.length;
 
- 
+           for(int i=0; i<numberOfVotes ; i++) {
+               System.out.println(voteTallies[i]);
+            
             // calling
             w = w + 1;
+        }
             // each time through the inner loop
         
         return w;
@@ -355,11 +368,15 @@ while(serverIsRunning()) {
     public int tallyVote2() {
         int w = 0;
         int numberOfVotes = voteTallies.length;
+        int i=0;
 
-
+            while(i<numberOfVotes) {
+                
+               System.out.println(voteTallies[i]);
             // calling
             w = w + 1;
             // each time through the inner loop
+        }
         
         return w;
     }
